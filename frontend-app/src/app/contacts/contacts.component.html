@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-md-4" id="user-part">
+
+        <div class="user-img middle">
+            <img src="../../assets/img/user-img.jfif" alt="user img">
+        </div>
+        <div class="user-details middle">
+            <div class="full-name">{{ userResponse?.name }}</div>
+            <div class="email">{{ userResponse?.userEmail }}</div>
+            <div class="phone">{{ userResponse?.userPhone }} </div>
+        </div>
+
+        <div class="add-contact">
+            <a [routerLink]="['./', 'add-contact']">
+                <button class="btn btn-primary">Add Contact</button>
+            </a>
+        </div>
+
+        <div class="add-contact">
+            <a [routerLink]="['contact-list']">
+                <button class="btn btn-primary">Contact List</button>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="col-md-8" id="contact-part">        
+        <router-outlet></router-outlet>
+    </div>
+</div>

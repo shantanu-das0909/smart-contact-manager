@@ -1,0 +1,26 @@
+<h3 class="contact-list-header">Contacts</h3>
+
+<div class="contact-list">
+    <table>
+        <tr class="table-head">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th class="actions"></th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td>{{ contact.contactName }}</td>
+                <td>{{ contact.contactEmail }}</td>
+                <td>{{ contact.contactPhone }}</td>
+                <td>
+                    <a [routerLink]="['../', 'update-contact', contact.contactId]">
+                        <button class="btn btn-primary custom-btn btn-16">update</button>
+                    </a>
+                    <button class="btn custom-btn btn-16"
+                    (click)="delete(contact.contactId)">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

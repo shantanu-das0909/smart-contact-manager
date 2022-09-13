@@ -1,0 +1,62 @@
+.row {
+    margin: 40px 100px 0 50px;
+}
+#user-part, #contact-part {
+    /* background: lightcyan; */
+    height: 80vh;
+    padding: 3em;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgb(219, 217, 217);
+}
+
+.user-img, .user-details{
+    text-align: center;
+}
+
+.user-img > img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px lightgray;
+    transition: transform 0.3s;
+}
+
+.user-img img:hover {
+    transform: scale(1.1);
+}
+
+.user-details {
+    margin-top: 50px;
+}
+
+.user-details div {
+    margin: 10px;
+    width: 100%;
+    height: 2em;
+    /* background: grey; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.add-contact a button {
+    margin: 10px;
+    width: 100%;
+    height: 2em;
+    /* background: grey; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px lightgray;
+    padding-bottom: 2em;
+    /* background: #33b249; */
+    background-image: linear-gradient(to top left, #4658ff, #6584eb);
+    transition: transform 0.3s;
+}
+
+.add-contact a button:hover {
+    transform: scale(1.1);
+}
+
+#contact-part{
+    overflow:auto;
+}
+
+
+

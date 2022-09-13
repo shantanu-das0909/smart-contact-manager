@@ -1,0 +1,46 @@
+<h3 class="contact-list-header">Add Contact</h3>
+
+
+<form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="name"
+            name="name"
+            required
+            placeholder="Enter name"
+            [(ngModel)]="contact.contactName">
+    </div>
+
+    <div class="form-group">
+        <label for="emailId" class="form-label">Email Id</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="emailId"
+            name="emailId"
+            required
+            placeholder="Enter email id"
+            [(ngModel)]="contact.contactEmail">
+    </div>
+
+    <div class="form-group">
+    <label for="phone" class="form-label">Phone</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="phone"
+        name="phone"
+        required
+        placeholder="Enter contact number"
+        [(ngModel)]="contact.contactPhone">
+    </div>  
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-large btn-success mt-4"
+        [disabled]="!formCheck()">Add</button>
+    </div>
+</form>

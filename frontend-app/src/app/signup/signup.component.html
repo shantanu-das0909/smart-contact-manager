@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            
+            <div class="heading"><h2 class="highlight">Signup Portal</h2></div>
+
+            <form (ngSubmit)="onSubmit()">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Enter full name"
+                                [(ngModel)]="signup.name">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="emailId" class="form-label">Email Id</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="emailId"
+                                name="emailId"
+                                required
+                                placeholder="Enter email id"
+                                [(ngModel)]="signup.userEmail">
+                        </div>
+        
+                        <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="phone"
+                            name="phone"
+                            required
+                            placeholder="Enter contact number"
+                            [(ngModel)]="signup.userPhone">
+                        </div>  
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="username"
+                                name="username"
+                                required
+                                placeholder="Enter username"
+                                [(ngModel)]="signup.username">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input 
+                                type="password" 
+                                class="form-control" 
+                                id="password"
+                                name="password"
+                                required
+                                placeholder="Enter password"
+                                [(ngModel)]="signup.password">
+                        </div>
+        
+                        <div class="text-center signup-div">
+                            <button type="submit" class="btn btn-large btn-success signup"
+                            [disabled]="!formCheck()">SignUp &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
